@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<head>
+  <!-- <meta name=viewport content="width=800"> -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+    
+    img {
+    border-radius: 5%;
+    }
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+    
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+    
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+    }
+    
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+    
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 30px;
+    }
+    
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 10cm;
+    }
+    
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+ 
+     .zero {
+      width: 160px;
+      height: 80px;
+      position: relative;
+    }
+
+    .one {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+    
+    .two {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+    
+    mid {
+      font-size: 40px;
+      position:relative;
+      top:2px;
+    }
+
+    span.highlight {
+      background-color: #ffffd0;
+    }
+
+  details {
+    outline:none;
+    color:#000000;
+  }
+  summary {
+      outline:none;
+      color:#000000;
+  }
+  details[open] {
+      outline:none;
+      color:#696969;
+  }
+  summary[open] {
+      outline:none;
+      color:#000000;
+  }
+  details:hover summary::-webkit-details-marker:hover {
+     color:red;
+     background:white;
+     font-size: 120%;
+ }
+ summary a * {
+  pointer-events: none;
+  } 
+  </style>
+  <link rel="icon" href="https://www.ri.cmu.edu/wp-content/uploads/2017/04/ri-favicon.ico">
+
+  <title>Abhijat Biswas</title>
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<link rel="stylesheet" type="text/css" href="data:text/css;charset=UTF-8,%0A%20%20%20%20%20%20.darkmode-layer%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20pointer-events%3A%20none%3B%0A%20%20%20%20%20%20%20%20background%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20transition%3A%20all%200.5s%20ease%3B%0A%20%20%20%20%20%20%20%20mix-blend-mode%3A%20difference%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--button%20%7B%0A%20%20%20%20%20%20%20%20width%3A%202.9rem%3B%0A%20%20%20%20%20%20%20%20height%3A%202.9rem%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20right%3A%2032px%3B%0A%20%20%20%20%20%20%20%20bottom%3A%2032px%3B%0A%20%20%20%20%20%20%20%20left%3A%20unset%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--simple%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20top%3A%200%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20transform%3A%20scale(1)%20!important%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--expanded%20%7B%0A%20%20%20%20%20%20%20%20transform%3A%20scale(100)%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%200%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-layer--no-transition%20%7B%0A%20%20%20%20%20%20%20%20transition%3A%20none%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-toggle%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%23100f2c%3B%0A%20%20%20%20%20%20%20%20width%3A%203rem%3B%0A%20%20%20%20%20%20%20%20height%3A%203rem%3B%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%2050%25%3B%0A%20%20%20%20%20%20%20%20border%3Anone%3B%0A%20%20%20%20%20%20%20%20right%3A%2032px%3B%0A%20%20%20%20%20%20%20%20bottom%3A%2032px%3B%0A%20%20%20%20%20%20%20%20left%3A%20unset%3B%0A%20%20%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%20%20%20%20transition%3A%20all%200.5s%20ease%3B%0A%20%20%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-toggle--white%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%23fff%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-toggle--inactive%20%7B%0A%20%20%20%20%20%20%20%20display%3A%20none%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.darkmode-background%20%7B%0A%20%20%20%20%20%20%20%20background%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20%20%20pointer-events%3A%20none%3B%0A%20%20%20%20%20%20%20%20z-index%3A%20-10%3B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20top%3A%200%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20img%2C%20.darkmode-ignore%20%7B%0A%20%20%20%20%20%20%20%20isolation%3A%20isolate%3B%0A%20%20%20%20%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%40media%20screen%20and%20(-ms-high-contrast%3A%20active)%2C%20(-ms-high-contrast%3A%20none)%20%7B%0A%20%20%20%20%20%20%20%20.darkmode-toggle%20%7Bdisplay%3A%20none%20!important%7D%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20%40supports%20(-ms-ime-align%3Aauto)%2C%20(-ms-accelerator%3Atrue)%20%7B%0A%20%20%20%20%20%20%20%20.darkmode-toggle%20%7Bdisplay%3A%20none%20!important%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20">
+</head>
+
+<body>
+  <!-- <div class="darkmode-background"></div><div class="darkmode-layer darkmode-layer--button"></div>
+  <button class="darkmode-toggle" aria-label="Activate dark mode" aria-checked="false" role="checkbox">dark</button> -->
+
+  <!-- dark mode! -->
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script>
+    var options = {
+      time: '0.5s', // default: '0.3s'
+      label: 'dark', // default: ''
+    }
+  
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+  </script>
+
+  <table width="800" cellspacing="0" cellpadding="0" border="0" align="center">
+    <tbody><tr>
+      <td>
+        <table width="100%" cellspacing="0" cellpadding="20" border="0" align="center">
+          <tbody><tr>
+            <td width="75%" valign="middle">
+              <p align="center">
+                <name>Abhijat Biswas </name>
+                  <!-- |</font></mid> <font color="#C0C0C0">AJ</font></name> -->
+              </p><p align="center">
+                <font size="3">abhijat <font color="#ff0000">[at]</font> cmu <font color="#ff0000">[dot]</font> edu </font>
+              </p>
+              <p></p><p style="text-align:justify">
+              Hey there! I'm Abhijat Biswas. I currently lead the AI efforts at <a href="https://clementine.games/">Clementine</a>, where we are building voice-to-code agents to bring alive game companions.
+              <br>
+              <br>
+              I recently-graduated with a PhD from the Robotics Institute at Carnegie Mellon University, 
+              working with <a href="http://hennyadmoni.com">Henny Admoni</a> on using driver eye-gaze information
+              for safer autonomous and assisted driving. 
+              I have spent summers working on similar topics at <a href="https://www.tri.global/">Toyota Research Institute</a> (modeling driver risk perception) and <a href="https://www.bosch.com/">Bosch</a> (gaze-based driving policy causal confusion mitigation).
+              My research is supported by the <a href="https://linksim.org/about/">Link Foundation Modeling, Simulation, and Training Fellowship</a>.
+              I also got a Masters at CMU, working with Henny and <a href="https://www.cs.cmu.edu/~astein/">Aaron Steinfeld</a>,
+              on social robot navigation.
+              </p>
+              <p></p><p style="text-align:justify"> 
+              Previously, I've spent time teaching neural nets to recognize free hand sketches at <a href="http://val.serc.iisc.ernet.in/valweb/">IISc Bangalore</a>.
+              I've also worked on using temporal smoothness in videos as supervision for neural networks at <a href="http://users.cs.cf.ac.uk/Dave.Marshall/">Cardiff University</a>. 
+              I went to <a href="http://www.iitg.ac.in/">IIT Guwahati</a> for ECE.
+              </p>
+
+              <p align="center">
+                <strong>
+                <a href="assets/CV_wrefs.pdf" target="_blank">CV</a> &nbsp;/&nbsp;
+                <a href="https://scholar.google.com/citations?user=NsV0tX8AAAAJ&hl=en" target="_blank">G Scholar</a> &nbsp;/&nbsp;
+                <a href="https://www.linkedin.com/in/abhijatb/" target="_blank">LinkedIn</a> &nbsp;/&nbsp;
+                <!-- <a href="https://www.semanticscholar.org/author/28816112" target="_blank">Semantic Scholar</a> &nbsp;/&nbsp; -->
+                <!-- <a href="https://www.ri.cmu.edu/ri-people/abhijat-biswas/" target="_blank"> RI webpage </a> &nbsp;/&nbsp; -->
+                <a href="https://github.com/ajdroid/" target="_blank"> Github </a>
+                </strong>
+              </p>
+            </td>
+            <td width="50%">
+              <img src="assets/profile.jpg" style="width: 200; height: auto; border-radius: 5%;">
+            </td>
+          </tr>
+        </tbody></table>
+        <div style="height:20px;font-size:1px;">&nbsp;</div>
+
+      <!-- ###################################################################### -->
+      <!-- Updates -->
+      <!-- ###################################################################### -->
+      <h2>Updates</h2>
+       <!-- New updates table -->
+        <table width="100%" align="center" border="0" cellspacing="6" cellpadding="0">
+          <colgroup>
+            <col span="1" style="width: 12%;">
+            <col span="1" style="width: 88%;">
+          </colgroup>
+        <tbody>			
+          
+        <tr>
+          <td><p style="color:FF0000; display:inline;">[Sept '24] &nbsp</p></td>
+          <td> We've been working on a new method and dataset for measuring drivers' situational awareness (and its transitions) from their eye gaze. 
+            The paper will appear at CoRL '24 and the project website is <a href="https://harplab.github.io/DriverSA/">here</a>.
+          </td>
+        </tr>
+        <tr>
+        <td><p style="color:FF0000; display:inline;">[Sept '24] &nbsp</p></td>
+        <td> Happy to announce our work last summer in the new arXiv paper <a href="https://arxiv.org/abs/2409.04738">Modeling Drivers' Risk Perception via Attention to Improve Driving Assistance</a> (w/ TRI). 
+          We leverage a transformer based predictor to model how risky the drivers' perception of on-road events is using gaze to reason about their model of other agents.
+          </td>
+        </tr>
+        <tr>
+          <td><p style="color:FF0000; display:inline;">[Aug '24] &nbsp</p></td>
+          <td> I just defended -- offically graduating and filled with gratitute towards everyone who contributed to this journey!
+            My thesis "Eye Gaze for Intelligent Driving" can be found <a href="https://www.ri.cmu.edu/publications/eye-gaze-for-intelligent-driving/">here</a>.
+            </td>
+        </tr>
+        <tr>
+        <tr>
+          <td><p style="color:FF0000; display:inline;">[Jan '24] &nbsp</p></td>
+          <td> We just released <a href="assets/papers/biswas_IV2023.pdf">a dataset and method </a> for estimating the importance of driving objects with a view towards triaging for driver assistance. 
+            The <a href="https://ieeexplore.ieee.org/abstract/document/10443043">RA-L paper</a> is out now!</td>
+            </td>
+        </tr>
+
+        <tr>
+          <td><p style="color:FF0000; display:inline;">[Jun '23] &nbsp</p></td>
+          <td>Presented our work on the <a href="assets/papers/biswas_IV2023.pdf">characterizing of human peripheral vision during driving</a> for 
+            intelligent driving assistance at IV 2023 in beautiful Anchorage!</td>
+        </tr>
+
+        <tr>
+          <td><p style="color:FF0000; display:inline;">[May '23] &nbsp</p></td>
+          <td>Starting a research internship at Toyota Research Institute, working on object-based representations of driver awareness. Excited to be in Cambridge!</td>
+        </tr>
+        
+        <tr>
+          <td><p style="color:FF0000; display:inline;">[Dec '22] &nbsp</p></td>
+          <td>Our work on using using <a href="assets/papers/Gaze_CC__IEEE_IVS_.pdf">driver eye gaze as a supervisor for imitation learned driving</a> won <u>best paper</u> at the 
+            <a href="https://aligning-robot-human-representations.github.io/"></a>Aligning Robot Representations with Humans workshop</a> at CoRL 2022!</td>
+        </tr>
+        
+        </tbody>
+        </tbody></table>
+        </div>
+
+        <!-- Hidden updates table -->
+
+        <div style="height:5px;font-size:1px;">&nbsp;</div>
+        <details>
+          <summary>
+          <p style="color:FF0000; display:inline"><em>Click for more updates</em></p>
+          </summary>
+          <table width="100%" align="center" border="0" cellspacing="6" cellpadding="0">
+            <colgroup>
+              <col span="1" style="width: 12%;">
+              <col span="1" style="width: 88%;">
+            </colgroup>
+            <tbody>
+            <p>
+              
+              <tr>
+                <td><p style="color:FF0000; display:inline;">[Mar '23] &nbsp</p></td>
+                <td>Proposed my PhD thesis -- offically a PhD candidate! You can email me to watch a recording of my talk "Eye Gaze for Intelligent Driving".</td>
+              </tr>
+
+              <tr>
+                <td><p style="color:FF0000; display:inline;">[Dec '22] &nbsp</p></td>
+                <td>Organized the <a href="https://attention-learning-workshop.github.io/">Attention Learning Workshop</a> at NeurIPS '22 .</td>
+              </tr>
+      
+
+              <tr>
+                <td><p style="color:FF0000; display:inline;">[May '22] &nbsp</p></td>
+                <td>Grateful to have won a <a href="https://linksim.org/awarded-projects/">Modeling, Simulation, and Training Fellowship</a> to support my PhD research -- thank you to the Link Foundation!</a> </td> 
+              </tr>
+              
+              <tr>
+                <td><p style="color:FF0000; display:inline;">[Mar '22] &nbsp</p></td>
+                <td>Presented our VR driving simulator DReyeVR at HRI 2023 -- available on <a href="https://github.com/HARPLab/DReyeVR">GitHub!</a> </td> 
+              </tr>
+              
+              <tr>
+                <td><p style="color:FF0000; display:inline;">[Jun '22] &nbsp</p></td>
+                <td>Starting a research internship at Bosch, exploring the use of human driver eye gaze for supervising imitation learned driving agents.</td>
+              </tr>
+            </p>
+          </tbody>
+          </table>
+        </details>
+      <br>
+      <hr>
+
+		<div style="height:20px;font-size:1px;">&nbsp;</div>
+
+        
+
+
+    <!-- Ongoing projects -->
+<!--     
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="100%" valign="middle">
+            <h1>Ongoing work</h1>
+          </td>
+        </tr>
+  
+        <tr>
+          <td valign="top" width="100%">
+          <ul>
+  
+          <li> 
+          <papertitle>
+          Representations of driver situational awareness (SA) based on eye gaze
+          </papertitle>
+          <br>
+          <i> 
+          Building real-time driver situational awareness via a novel interactive driver SA data collection method and object-based representations.
+          </i> 
+      
+          <br>          
+          </li>
+            
+          </ul>  
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top" width="100%">
+          <ul>
+  
+          <li> 
+          <papertitle>
+          Driver risk perception modeling
+          </papertitle>
+          <br>
+          <i> 
+          With TRI, I am working on modeling the driver's mental model of other vehicles on the road and hence, their perceived risk using eye gaze data.
+          </i> 
+      
+          <br>          
+          </li>
+            
+          </ul>  
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top" width="100%">
+          <ul>
+  
+          <li> 
+          <papertitle>
+          Gaze-based memory modeling in virtual scenes
+          </papertitle>
+          <br>
+          <i> 
+            We show that it is possible to predict cue-free recall of objects in both 2D and 3D virtual scenes using purely gaze and object positional data. Preprint coming soon!
+          </i> 
+        
+          <br>          
+          </li>
+            
+          </ul>  
+          </td>
+        </tr>     
+
+
+      </table> -->
+
+  <!-- Research -->
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+    <tbody><tr>
+      <td width="100%" valign="middle">
+        <h1>Research</h1>
+        <font color="#696969">(*) denotes equal contribution</font>
+      </td>
+    </tr>
+  </tbody></table>    
+
+  <table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+    
+  <tbody>
+    
+     <!-- Driver SA -->
+     <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/vis_abstract_driversa.png" width="220">
+        </a>
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+            Modeling Drivers' Situational Awareness from Eye Gaze for Driving Assistance
+            </papertitle>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <u>A Biswas</u>, 
+            <a href="https://pranaygupta36.github.io/" target="_blank">P Gupta</a>,
+            <a href="https://shreeyakhurana.github.io/" target="_blank">S Khurana</a>,
+            <a href="https://davheld.github.io/" target="_blank">D Held</a>, and
+            <a href="https://hennyadmoni.com" target="_blank">H Admoni</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <!-- <font color="#696969"> -->
+            <em>
+            Conference on Robot Learning (CoRL) 2024
+            </em><br>
+            <div style="height:2.5px;font-size:1px;">&nbsp;</div>          
+            [<a href="https://harplab.github.io/DriverSA/" target="_blank">Project Page</a>]
+            [<a href="https://github.com/HARPLab/DriverSituationalAwareness" target="_blank">Github (code & data)</a>]
+            <div style="height:15px;font-size:1px;">&nbsp;</div>
+          </summary>
+          <i> 
+          We collect drivers' object-level situational awareness (SA) data via a novel interactive protocol in a VR driving simulator. We use the generated data to train a driver SA predictor from visual scene context and driver eye gaze.
+          Casting this as a semantic segmentation problem allows our model to use global scene context and local gaze-object relationships together, processing the whole scene at once regardless of the number of objects present.  
+
+        </details>
+      </td>
+    </tr>
+
+
+    <!-- TRI project -->
+    <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/TRIsumm23.png" width="220">
+        </a>
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+            Modeling Drivers' Risk Perception via Attention to Improve Driving Assistance
+            </papertitle>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <u>A Biswas</u>, 
+            <a href="https://www.johngideon.me/" target="_blank">J Gideon</a>,
+            <a href="https://www.linkedin.com/in/kimimasa-tamura-31b4a41ba/" target="_blank">K Tamura</a>, and
+            <a href="https://scholar.google.com/citations?&user=T5JSHMoAAAAJ" target="_blank">G Rosman</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <!-- <font color="#696969"> -->
+            <div style="height:5px;font-size:1px;">&nbsp;</div> 
+            [<a href="https://arxiv.org/abs/2409.04738" target="_blank">ArXiv</a>]
+            <div style="height:15px;font-size:1px;">&nbsp;</div>
+          </summary>
+          <i> 
+          We leverage a transformer based predictor to model how risky the drivers' perception of on-road events is using gaze to reason about their model of other agents.
+        </details>
+      </td>
+    </tr>
+
+    <!-- Gaze CC --> 
+    <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/GazeCC_thumb.jpg" width="220">
+        </a>
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+            Mitigating Causal Confusion in Driving Agents via Gaze Supervision 
+            </papertitle>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <u>A Biswas</u>, 
+            <a href="https://www.linkedin.com/in/badalpardhi/" target="_blank">BA Pardhi</a>,
+            <a href="http://calcharles.github.io/" target="_blank">C Chuck</a>,
+            <a href="https://scholar.google.com/citations?user=_XUgxrcAAAAJ" target="_blank">J Holtz</a>,
+            <a href="https://people.cs.umass.edu/~sniekum/" target="_blank">S Niekum</a>,          
+            <a href="https://hennyadmoni.com" target="_blank">H Admoni</a>, and
+            <a href="https://scholar.google.com/citations?&user=T5JSHMoAAAAJ" target="_blank">A Allievi</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <!-- <font color="#696969"> -->
+            <em>
+            International Conference on Autonomous Agents and Multiagent Systems (AAMAS) 2024
+            </em><br>
+            <a style="color: #BEBEBE" target="_blank">Also appeared at Aligning Robot Representations with Humans (ARRH) workshop at Conference on Robot Learning 2022</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div> 
+            [<a href="https://aligning-robot-human-representations.github.io/" style="color: #fbbd01" target="_blank">NVIDIA best paper award @ CoRL ARRH workshop</a>]
+            <div style="height:2.5px;font-size:1px;">&nbsp;</div>          
+            [<a href="assets/papers/Gaze_CC__IEEE_IVS_.pdf" target="_blank">Pre-print</a>]
+            <div style="height:15px;font-size:1px;">&nbsp;</div>
+          </summary>
+          <i> 
+          While driving, human drivers naturally exhibit an easily obtained, continuous signal that is highly correlated with causal elements of the state
+          space: eye gaze. How can we use it as a supervisory signal?
+
+        </details>
+      </td>
+    </tr>
+
+    <!-- Obj importance RAL -->
+    <tr>
+      <td width="25%" align="center">
+        <!-- <a href="https://youtu.be/yGIPSDOMGpY"></a> -->
+        <img src="https://pranaygupta36.github.io/images/oiecr.JPG" width="220">
+        </a>
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+              Object Importance Estimation using Counterfactual Reasoning for Intelligent Driving
+            </papertitle>                   
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <a href="https://pranaygupta36.github.io/">Pranay Gupta</a>,
+            <u>A Biswas</u>, and
+            <a href="https://www.hennyadmoni.com">Henny Admoni</a>,
+            <a href="https://www.davheld.github.io">David Held</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <!-- <font color="#696969"> -->
+            <em>
+            IEEE Robotics and Automation Letters (RA-L) 2024<br>
+            </em>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            [<a href="https://vehicle-importance.github.io/">Project Page</a>]
+            [<a href="https://github.com/vehicle-importance/oiecr">Code & Dataset</a>]  
+            [<a href="https://arxiv.org/abs/2312.02467">arXiv</a>]
+    
+            <div style="height:15px;font-size:1px;">&nbsp;</div>
+          </summary>
+          <i> 
+            The ability to identify important objects in a complex and dynamic driving environment can help assistive driving systems decide when to alert drivers. 
+            We tackle object importance estimation in a data-driven fashion and introduce HOIST - Human-annotated Object Importance in Simulated Traffic. 
+            HOIST contains driving scenarios with human-annotated importance labels for vehicles and pedestrians. 
+            We additionally propose a novel approach that relies on counterfactual reasoning to estimate an object's importance.
+            We generate counterfactual scenarios by modifying the motion of objects and ascribe importance based on how the modifications affect the ego vehicle's driving.
+            Our approach outperforms strong baselines for the task of object importance estimation on HOIST.        </details>
+      </td>
+    </tr>
+
+    <!-- Pitch blindness IV -->
+    <tr>
+      <td width="25%" align="center">
+        <!-- <a href="https://youtu.be/yGIPSDOMGpY"></a> -->
+        <img src="assets/paper_gifs/ffov_setup.png" width="220">
+        </a>
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+            Characterizing Drivers' Peripheral Vision via the Functional Field of View for Intelligent Driving Assistance
+            </papertitle>                   
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <u>A Biswas</u>, and
+            <a href="https://hennyadmoni.com" target="_blank">H Admoni</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <!-- <font color="#696969"> -->
+            <em>
+            IEEE Intelligent Vehicle Symposium (IV) 2023<br>
+            <a style="color: #009933" target="_blank">Oral: 5% acceptance rate</a><br>
+            </em>
+            <a style="color: #BEBEBE" target="_blank">Also appeared as a peer-reviewed talk at CogSci 23</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            [<a href="assets/papers/biswas_IV2023.pdf"_blank">Pre-print</a>]
+            <div style="height:15px;font-size:1px;">&nbsp;</div>
+          </summary>
+          <i> 
+          We find that driver peripheral vision is vertically asymmetrical -- more peripheral stimuli are missed 
+          in the upper portion of drivers FoV (only while driving).
+          Also, right after saccades (eye movements), driver peripheral vision degrades. 
+        </details>
+      </td>
+    </tr>
+    
+    <!-- DReyeVR -->
+    <tr>
+    <td width="25%" align="center">
+      <a href="https://youtu.be/yGIPSDOMGpY"></a>
+      <img src="assets/paper_gifs/dreyevr_demo.gif" width="220">
+      </a>
+    </td>
+    <td width="70%" valign="center">
+      <details>
+        <summary>
+          <papertitle>
+          DReyeVR: Democratizing Virtual Reality Driving Simulation for Behavioural & Interaction Research
+          </papertitle>                   
+          <div style="height:5px;font-size:1px;">&nbsp;</div>
+          <a href="https://gustavosilvera.github.io/" target="_blank">G Silvera</a>*,
+          <u>A Biswas</u>*, and
+          <a href="https://hennyadmoni.com" target="_blank">H Admoni</a>
+          <div style="height:5px;font-size:1px;">&nbsp;</div>
+          <!-- <font color="#696969"> -->
+          <em>
+          ACM/IEEE International Conference on Human-Robot Interaction (HRI) 2022,
+          </em><br>
+          Short Contributions Track </font>
+          <div style="height:5px;font-size:1px;">&nbsp;</div>
+          [<a href="https://arxiv.org/abs/2201.01931" target="_blank">arXiv</a>]
+          [<a href="https://github.com/HARPLab/DReyeVR" target="_blank">Simulator Github</a>]
+          [<a href="https://youtu.be/yGIPSDOMGpY" target="_blank">Video</a>]
+          <div style="height:15px;font-size:1px;">&nbsp;</div>
+        </summary>
+        <i> 
+        We open-source DReyeVR, our VR-based driving simulator built with human-centric research in mind.
+        It's based on CARLA -- if CARLA is for algorithmic drivers, DReyeVR is for humans.
+        The hardware setup is affordable for many academic labs, costing under 5000 USD.
+
+      </details>
+    </td>
+    </tr>
+
+    <!-- SocNavBench -->
+    <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/socnav_demo.gif" width="220">
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+              SocNavBench: A Grounded Simulation Testing Framework for Evaluating Social Navigation 
+            </papertitle>                   
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <u>A Biswas</u>,
+            A Wang,                
+            <a href="https://gustavosilvera.github.io/" target="_blank">G Silvera</a>,
+            <a href="https://www.cs.cmu.edu/~astein/" target="_blank">A Steinfeld</a>, and
+            <a href="https://hennyadmoni.com" target="_blank">H Admoni</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <em>ACM Transactions on Human-Robot Interaction (THRI) 2021</em>,<br>
+            Special Issue: Test Methods for Human-Robot Teaming Performance Evaluations </font>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            [<a href="https://dl.acm.org/doi/10.1145/3476413" target="_blank">Paper</a>]
+            [<a href="https://arxiv.org/abs/2103.00047" target="_blank">Pre-print</a>]
+            [<a href="https://github.com/CMU-TBD/SocNavBench" target="_blank">Simulator</a>]
+            [<a href="https://github.com/CMU-TBD/SocNavBench-baselines" target="_blank">Baselines</a>]
+            <!--/ <a href="https://youtu.be/nFaWtjanQXQ" target="_blank">video</a> -->
+            <div style="height:15px;font-size:1px;">&nbsp;</div>
+          </summary>
+          <i>We introduce SocNavBench, a simulation framework for evaluating social navigation algorithms in a consistent and interpretable manner. 
+          It has a simulator with photo-realistic capabilities, curated social navigation scenarios grounded in real-world pedestrian data, and a suite of metrics that is auto-computed.
+          Try it out to evaluate your own social navigation algorithms!</i>
+        </details>
+      </td>
+    </tr>
+
+    <!-- Anticipation ICSR -->
+    <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/anticipation_thumb.jpg" width="220">
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+              Examining the Effects of Anticipatory Robot Assistance on Human Decision Making                   
+            </papertitle>                   
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            B Newman*,
+            <u>A Biswas</u>*,
+            <a href="https://sarthakahuja.org/" target="_blank">S Ahuja</a>,
+            S Girdhar, and
+            <a href="https://hennyadmoni.com" target="_blank">H Admoni</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <em>International Conference on Social Robotics (ICSR) 2020</em><br>
+            [<a href="https://par.nsf.gov/servlets/purl/10273002" target="_blank">Paper</a>]
+            [<a href="https://www.youtube.com/watch?v=nNsQu5BYnds" target="_blank">Video</a>]
+            </summary>
+          <i>
+            Does preemptive robot assistance change human decision making? 
+          </i>
+          We show in an experiment (N=99), that people's decision making in a selection task
+           does change in response to anticipatory robot assistance, but predicting the direction of change is difficult.
+        </details>
+      </td>
+    </tr>
+
+    <!-- Human Torso Pose Forecasting in the Real World -->
+    <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/rss_mmpc.gif" width="220">
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+              Human Torso Pose Forecasting in the Real World 
+            </papertitle>                   
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <u>A Biswas</u>,
+            <a href="https://hennyadmoni.com" target="_blank">H Admoni</a>, and
+            <a href="https://www.cs.cmu.edu/~astein/" target="_blank">A Steinfeld</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <em>Multi-modal Perception and Control Workshop, Robotics:Science and Systems (RSS) 2018</em><br>
+            [<a href="http://harp.ri.cmu.edu/assets/pubs/mmpc_rss2018_biswas.pdf" target="_blank">Paper</a>]
+            [<a href="assets/papers/IROS_torso_pose.pdf" target="_blank">More results</a>]
+            </summary>
+          <i>
+        </details>
+      </td>
+    </tr>
+
+    <!-- SketchParse -->
+    <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/sketchparse_thumb.jpg" width="220" height="120">
+      </td>
+      <td width="75%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+              SketchParse: Towards Rich Descriptions for Poorly Drawn Sketches using Multi-Task Hierarchical Deep Networks 
+            </papertitle>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <a href="https://ravika.github.io/index.html" target="_blank">RK Sarvadevabhatla</a>,
+            <a href="http://www.ishtdwivedi.in/" target="_blank">I Dwivedi</a>,
+            <u>A Biswas</u>,
+            S Manocha, and
+            <a href="http://cds.iisc.ac.in/faculty/venky/" target="_blank">R V Babu</a>
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <em>ACM Multimedia Conference (ACM MM) 2017</em>
+            <div style="height:10px;font-size:1px;">&nbsp;</div>
+            [<a href="https://arxiv.org/abs/1709.01295" target="_blank">arXiv</a>]
+            [<a href="https://github.com/val-iisc/sketch-parse" target="_blank">Code</a>]
+            <div style="height:10px;font-size:1px;">&nbsp;</div>
+          </summary>
+        <i> Can we use neural networks to semantically parse freehand sketches?
+        </i> We show this is possible by <em>"sketchifying"</em> natural images to generate training data and employing a graphical model for generating descriptions. 
+        </details>
+      </td>
+    </tr>
+
+    <!--  Development of an assistive stereo vision system  -->
+    <tr>
+      <td width="25%" align="center">
+        <img src="assets/paper_gifs/invisyble_thumb.jpg" width="220">
+      </td>
+      <td width="70%" valign="center">
+        <details>
+          <summary>
+            <papertitle>
+              Development of an Assistive Stereo Vision System  
+            </papertitle>                   
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <a href="http://tanmayshankar.weebly.com/T Shankar" target="_blank">T Shankar</a>,
+            <u>A Biswas</u>, and
+            V Arun
+            <div style="height:5px;font-size:1px;">&nbsp;</div>
+            <em>International Convention on Rehabilitation Engineering & Assistive Technology, (i-CREATe) 2015</em><br>
+            [<a href="https://dl.acm.org/doi/10.5555/2846712.2846716" target="_blank">Paper</a>] 
+            [<a href="https://news.samsung.com/in/5th-edition-of-samsung-innovation-awards-at-iit-guwahati-encouraging-young-innovators-to-pursue-their-ideas" target="_blank">News</a>]
+            
+            </summary>
+          <i>
+        </details>
+      </td>
+    </tr>        
+
+
+    </tbody></table>
+    
+    <br>
+    <div style="height:20px;font-size:1px;">&nbsp;</div>
+
+  <!-- Projects -->
+  <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+      <tbody><tr>
+        <td width="100%" valign="middle">
+          <h1>Other projects</h1>
+        </td>
+      </tr>
+    </tbody></table>
+
+  <table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+    <tbody>            
+    <tr>
+      <td width="10%" align="center">
+          <img src="assets/projects/fomaml.jpg" width="150">
+        </td>
+      <td width="90%" valign="center">
+          <papertitle>
+            First-order Meta-Learned Initialization for Faster Adaptation in Deep Reinforcement Learning 
+          </papertitle> 
+          <br>
+          <div style="height:3px;font-size:1px;">&nbsp;</div>
+            Abhijat Biswas, Shubham Agrawal 
+          <div style="height:3px;font-size:1px;">&nbsp;</div>
+          [<a href="assets/projects/Deep_RL_project.pdf" target="_blank">Report</a>]                
+          <div style="height:3px;font-size:1px;">&nbsp;</div>
+          <i> First-derivative approximations to meta-learning updates perform just as well as second-derivative ones. Demonstrated on RL tasks </i>
+      </td>
+        </tr>
+
+        <tr>
+            <td width="10%" align="center">
+                <img src="assets/projects/socnavaw.gif" width="150" height="150">
+          </td>
+          <td width="90%" valign="center">
+              <papertitle>
+                Socially compliant path planning 
+              </papertitle> 
+                <br>
+                <div style="height:3px;font-size:1px;">&nbsp;</div>
+                Abhijat Biswas, Ting-Che Lin, and Sean Wang 
+                <div style="height:3px;font-size:1px;">&nbsp;</div>
+                [<a href="assets/projects/Planning_project.pdf" target="_blank">Report</a>] 
+                [<a href="https://github.com/ajdroid/SocAwNav782" target="_blank">Code</a>]
+                [<a href="https://youtu.be/aBGHSeXeBdE" target="_blank">Video</a>] 
+                <div style="height:3px;font-size:1px;">&nbsp;</div>
+                <i> RTAA* + Social-LSTM based social navigation </i>
+          </td>
+        </tr>
+
+        <tr>
+          <td width="10%" align="center">
+            <img src="assets/projects/ransac.jpg" width="150">
+          </td>
+          <td width="90%" valign="center">
+              <papertitle>Automatic Extrinsic Calibration of Stereo Camera and 3D LiDAR
+                </papertitle> 
+                <br>
+                <div style="height:3px;font-size:1px;">&nbsp;</div>
+                Abhijat Biswas, Aashi Manglik 
+                <div style="height:3px;font-size:1px;">&nbsp;</div>
+                [<a href="assets/projects/16822_Poster.pdf" target="_blank">Poster</a>]
+                <div style="height:3px;font-size:1px;">&nbsp;</div>
+                <i>We implement a method for estimation of MAV poses and dynamic parameters during flight.</i>
+          </td>
+        </tr>
+    </tbody></table>
+
+  <table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+    <tbody><tr><td>
+          <p align="right"><font size="2" color="#696969">
+      Last updated: Feb '24
+          </font></p><p align="right"><font size="2" color="#696969"><font size="2" color="#696969">
+      <a href="https://www.cs.cmu.edu/~sudhars1/" target="_blank"><font size="2">Imitation is the sincerest form of flattery
+      </font></a><font size="2">
+      </font></font></font></p><font size="2" color="#696969"><font size="2" color="#696969">
+
+      </font></font></td></tr>
+    </tbody></table>
+
+</td></tr></tbody></table></body></html>
