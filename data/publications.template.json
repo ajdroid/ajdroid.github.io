@@ -1,0 +1,222 @@
+[
+  {
+    "id": "driver-sa-corl-2024",
+    "title": "Modeling Drivers' Situational Awareness from Eye Gaze for Driving Assistance",
+    "imageSrc": "assets/paper_gifs/vis_abstract_driversa.png",
+    "imageWidth": 220,
+    "authorsHtml": "<u>A Biswas</u>, <a href=\"https://pranaygupta36.github.io/\" target=\"_blank\">P Gupta</a>, <a href=\"https://shreeyakhurana.github.io/\" target=\"_blank\">S Khurana</a>, <a href=\"https://davheld.github.io/\" target=\"_blank\">D Held</a>, and <a href=\"https://hennyadmoni.com\" target=\"_blank\">H Admoni</a>",
+    "venueHtml": "Conference on Robot Learning (CoRL) 2024",
+    "links": [
+      {
+        "label": "Project Page",
+        "url": "https://harplab.github.io/DriverSA/"
+      },
+      {
+        "label": "Github (code & data)",
+        "url": "https://github.com/HARPLab/DriverSituationalAwareness"
+      }
+    ],
+    "abstractHtml": "We collect drivers' object-level situational awareness (SA) data via a novel interactive protocol in a VR driving simulator. We use the generated data to train a driver SA predictor from visual scene context and driver eye gaze. Casting this as a semantic segmentation problem allows our model to use global scene context and local gaze-object relationships together, processing the whole scene at once regardless of the number of objects present."
+  },
+  {
+    "id": "risk-perception-arxiv-2024",
+    "title": "Modeling Drivers' Risk Perception via Attention to Improve Driving Assistance",
+    "imageSrc": "assets/paper_gifs/TRIsumm23.png",
+    "imageWidth": 220,
+    "authorsHtml": "<u>A Biswas</u>, <a href=\"https://www.johngideon.me/\" target=\"_blank\">J Gideon</a>, <a href=\"https://www.linkedin.com/in/kimimasa-tamura-31b4a41ba/\" target=\"_blank\">K Tamura</a>, and <a href=\"https://scholar.google.com/citations?&user=T5JSHMoAAAAJ\" target=\"_blank\">G Rosman</a>",
+    "links": [
+      {
+        "label": "ArXiv",
+        "url": "https://arxiv.org/abs/2409.04738"
+      }
+    ],
+    "abstractHtml": "We leverage a transformer based predictor to model how risky the drivers' perception of on-road events is using gaze to reason about their model of other agents."
+  },
+  {
+    "id": "gaze-supervision-aamas-2024",
+    "title": "Mitigating Causal Confusion in Driving Agents via Gaze Supervision",
+    "imageSrc": "assets/paper_gifs/GazeCC_thumb.jpg",
+    "imageWidth": 220,
+    "authorsHtml": "<u>A Biswas</u>, <a href=\"https://www.linkedin.com/in/badalpardhi/\" target=\"_blank\">BA Pardhi</a>, <a href=\"http://calcharles.github.io/\" target=\"_blank\">C Chuck</a>, <a href=\"https://scholar.google.com/citations?user=_XUgxrcAAAAJ\" target=\"_blank\">J Holtz</a>, <a href=\"https://people.cs.umass.edu/~sniekum/\" target=\"_blank\">S Niekum</a>, <a href=\"https://hennyadmoni.com\" target=\"_blank\">H Admoni</a>, and <a href=\"https://scholar.google.com/citations?&user=T5JSHMoAAAAJ\" target=\"_blank\">A Allievi</a>",
+    "venueHtml": "International Conference on Autonomous Agents and Multiagent Systems (AAMAS) 2024",
+    "notesHtml": "<a style=\"color: #BEBEBE\" target=\"_blank\">Also appeared at Aligning Robot Representations with Humans (ARRH) workshop at Conference on Robot Learning 2022</a>",
+    "links": [
+      {
+        "label": "NVIDIA best paper award @ CoRL ARRH workshop",
+        "url": "https://aligning-robot-human-representations.github.io/",
+        "color": "#fbbd01"
+      },
+      {
+        "label": "Pre-print",
+        "url": "assets/papers/Gaze_CC__IEEE_IVS_.pdf"
+      }
+    ],
+    "abstractHtml": "While driving, human drivers naturally exhibit an easily obtained, continuous signal that is highly correlated with causal elements of the state space: eye gaze. How can we use it as a supervisory signal?"
+  },
+  {
+    "id": "oiecr-ral-2024",
+    "title": "Object Importance Estimation using Counterfactual Reasoning for Intelligent Driving",
+    "imageSrc": "https://pranaygupta36.github.io/images/oiecr.JPG",
+    "imageWidth": 220,
+    "authorsHtml": "<a href=\"https://pranaygupta36.github.io/\">Pranay Gupta</a>, <u>A Biswas</u>, <a href=\"https://www.hennyadmoni.com\">Henny Admoni</a>, <a href=\"https://www.davheld.github.io\">David Held</a>",
+    "venueHtml": "IEEE Robotics and Automation Letters (RA-L) 2024",
+    "links": [
+      {
+        "label": "Project Page",
+        "url": "https://vehicle-importance.github.io/"
+      },
+      {
+        "label": "Code & Dataset",
+        "url": "https://github.com/vehicle-importance/oiecr"
+      },
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2312.02467"
+      }
+    ],
+    "abstractHtml": "The ability to identify important objects in a complex and dynamic driving environment can help assistive driving systems decide when to alert drivers. We tackle object importance estimation in a data-driven fashion and introduce HOIST - Human-annotated Object Importance in Simulated Traffic. HOIST contains driving scenarios with human-annotated importance labels for vehicles and pedestrians. We additionally propose a novel approach that relies on counterfactual reasoning to estimate an object's importance. We generate counterfactual scenarios by modifying the motion of objects and ascribe importance based on how the modifications affect the ego vehicle's driving. Our approach outperforms strong baselines for the task of object importance estimation on HOIST."
+  },
+  {
+    "id": "ffov-iv-2023",
+    "title": "Characterizing Drivers' Peripheral Vision via the Functional Field of View for Intelligent Driving Assistance",
+    "imageSrc": "assets/paper_gifs/ffov_setup.png",
+    "imageWidth": 220,
+    "authorsHtml": "<u>A Biswas</u>, and <a href=\"https://hennyadmoni.com\" target=\"_blank\">H Admoni</a>",
+    "venueHtml": "IEEE Intelligent Vehicle Symposium (IV) 2023",
+    "notesHtml": "<a style=\"color: #009933\" target=\"_blank\">Oral: 5% acceptance rate</a><br><a style=\"color: #BEBEBE\" target=\"_blank\">Also appeared as a peer-reviewed talk at CogSci 23</a>",
+    "links": [
+      {
+        "label": "Pre-print",
+        "url": "assets/papers/biswas_IV2023.pdf"
+      }
+    ],
+    "abstractHtml": "We find that driver peripheral vision is vertically asymmetrical -- more peripheral stimuli are missed in the upper portion of drivers FoV (only while driving). Also, right after saccades (eye movements), driver peripheral vision degrades."
+  },
+  {
+    "id": "dreyevr-hri-2022",
+    "title": "DReyeVR: Democratizing Virtual Reality Driving Simulation for Behavioural & Interaction Research",
+    "imageSrc": "assets/paper_gifs/dreyevr_demo.gif",
+    "imageWidth": 220,
+    "imageLink": "https://youtu.be/yGIPSDOMGpY",
+    "authorsHtml": "<a href=\"https://gustavosilvera.github.io/\" target=\"_blank\">G Silvera</a>*, <u>A Biswas</u>*, and <a href=\"https://hennyadmoni.com\" target=\"_blank\">H Admoni</a>",
+    "venueHtml": "ACM/IEEE International Conference on Human-Robot Interaction (HRI) 2022, <br>Short Contributions Track",
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/2201.01931"
+      },
+      {
+        "label": "Simulator Github",
+        "url": "https://github.com/HARPLab/DReyeVR"
+      },
+      {
+        "label": "Video",
+        "url": "https://youtu.be/yGIPSDOMGpY"
+      }
+    ],
+    "abstractHtml": "We open-source DReyeVR, our VR-based driving simulator built with human-centric research in mind. It's based on CARLA -- if CARLA is for algorithmic drivers, DReyeVR is for humans. The hardware setup is affordable for many academic labs, costing under 5000 USD."
+  },
+  {
+    "id": "socnavbench-thri-2021",
+    "title": "SocNavBench: A Grounded Simulation Testing Framework for Evaluating Social Navigation",
+    "imageSrc": "assets/paper_gifs/socnav_demo.gif",
+    "imageWidth": 220,
+    "authorsHtml": "<u>A Biswas</u>, A Wang, <a href=\"https://gustavosilvera.github.io/\" target=\"_blank\">G Silvera</a>, <a href=\"https://www.cs.cmu.edu/~astein/\" target=\"_blank\">A Steinfeld</a>, and <a href=\"https://hennyadmoni.com\" target=\"_blank\">H Admoni</a>",
+    "venueHtml": "ACM Transactions on Human-Robot Interaction (THRI) 2021,<br>Special Issue: Test Methods for Human-Robot Teaming Performance Evaluations",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://dl.acm.org/doi/10.1145/3476413"
+      },
+      {
+        "label": "Pre-print",
+        "url": "https://arxiv.org/abs/2103.00047"
+      },
+      {
+        "label": "Simulator",
+        "url": "https://github.com/CMU-TBD/SocNavBench"
+      },
+      {
+        "label": "Baselines",
+        "url": "https://github.com/CMU-TBD/SocNavBench-baselines"
+      }
+    ],
+    "abstractHtml": "We introduce SocNavBench, a simulation framework for evaluating social navigation algorithms in a consistent and interpretable manner. It has a simulator with photo-realistic capabilities, curated social navigation scenarios grounded in real-world pedestrian data, and a suite of metrics that is auto-computed. Try it out to evaluate your own social navigation algorithms!"
+  },
+  {
+    "id": "anticipatory-assistance-icsr-2020",
+    "title": "Examining the Effects of Anticipatory Robot Assistance on Human Decision Making",
+    "imageSrc": "assets/paper_gifs/anticipation_thumb.jpg",
+    "imageWidth": 220,
+    "authorsHtml": "B Newman*, <u>A Biswas</u>*, <a href=\"https://sarthakahuja.org/\" target=\"_blank\">S Ahuja</a>, S Girdhar, and <a href=\"https://hennyadmoni.com\" target=\"_blank\">H Admoni</a>",
+    "venueHtml": "International Conference on Social Robotics (ICSR) 2020",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://par.nsf.gov/servlets/purl/10273002"
+      },
+      {
+        "label": "Video",
+        "url": "https://www.youtube.com/watch?v=nNsQu5BYnds"
+      }
+    ],
+    "abstractHtml": "<i>Does preemptive robot assistance change human decision making?</i> We show in an experiment (N=99), that people's decision making in a selection task does change in response to anticipatory robot assistance, but predicting the direction of change is difficult."
+  },
+  {
+    "id": "torso-pose-rss-2018",
+    "title": "Human Torso Pose Forecasting in the Real World",
+    "imageSrc": "assets/paper_gifs/rss_mmpc.gif",
+    "imageWidth": 220,
+    "authorsHtml": "<u>A Biswas</u>, <a href=\"https://hennyadmoni.com\" target=\"_blank\">H Admoni</a>, and <a href=\"https://www.cs.cmu.edu/~astein/\" target=\"_blank\">A Steinfeld</a>",
+    "venueHtml": "Multi-modal Perception and Control Workshop, Robotics:Science and Systems (RSS) 2018",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "http://harp.ri.cmu.edu/assets/pubs/mmpc_rss2018_biswas.pdf"
+      },
+      {
+        "label": "More results",
+        "url": "assets/papers/IROS_torso_pose.pdf"
+      }
+    ]
+  },
+  {
+    "id": "sketchparse-acmmm-2017",
+    "title": "SketchParse: Towards Rich Descriptions for Poorly Drawn Sketches using Multi-Task Hierarchical Deep Networks",
+    "imageSrc": "assets/paper_gifs/sketchparse_thumb.jpg",
+    "imageWidth": 220,
+    "imageHeight": 120,
+    "contentWidth": 75,
+    "authorsHtml": "<a href=\"https://ravika.github.io/index.html\" target=\"_blank\">RK Sarvadevabhatla</a>, <a href=\"http://www.ishtdwivedi.in/\" target=\"_blank\">I Dwivedi</a>, <u>A Biswas</u>, S Manocha, and <a href=\"http://cds.iisc.ac.in/faculty/venky/\" target=\"_blank\">R V Babu</a>",
+    "venueHtml": "ACM Multimedia Conference (ACM MM) 2017",
+    "links": [
+      {
+        "label": "arXiv",
+        "url": "https://arxiv.org/abs/1709.01295"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/val-iisc/sketch-parse"
+      }
+    ],
+    "abstractHtml": "<i>Can we use neural networks to semantically parse freehand sketches?</i> We show this is possible by <em>\"sketchifying\"</em> natural images to generate training data and employing a graphical model for generating descriptions."
+  },
+  {
+    "id": "assistive-stereo-icreate-2015",
+    "title": "Development of an Assistive Stereo Vision System",
+    "imageSrc": "assets/paper_gifs/invisyble_thumb.jpg",
+    "imageWidth": 220,
+    "authorsHtml": "<a href=\"http://tanmayshankar.weebly.com/\" target=\"_blank\">T Shankar</a>, <u>A Biswas</u>, and V Arun",
+    "venueHtml": "International Convention on Rehabilitation Engineering & Assistive Technology, (i-CREATe) 2015",
+    "links": [
+      {
+        "label": "Paper",
+        "url": "https://dl.acm.org/doi/10.5555/2846712.2846716"
+      },
+      {
+        "label": "News",
+        "url": "https://news.samsung.com/in/5th-edition-of-samsung-innovation-awards-at-iit-guwahati-encouraging-young-innovators-to-pursue-their-ideas"
+      }
+    ]
+  }
+]

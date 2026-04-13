@@ -1,0 +1,43 @@
+{
+  "name": "Abhijat Biswas",
+  "emailHtml": "abhijat <font color=\"#ff0000\">[at]</font> cmu <font color=\"#ff0000\">[dot]</font> edu",
+  "paragraphsHtml": [
+    [
+      "Hey there! I'm Abhijat Biswas. I currently work on RL for multimodal models at <a href=\"https://www.inworld.ai/\">Inworld AI</a>,",
+      "where we are building the (<a href=\"https://artificialanalysis.ai/text-to-speech/leaderboard\">best Text-to-Speech (TTS) models</a>).",
+      "<br><br>",
+      "Previously, I led the AI efforts at <a href=\"https://clementine.games/\">Clementine</a>,",
+      "where built voice-to-code agents to bring alive game companions. You can check out our work on <a href=\"https://www.youtube.com/watch?v=ThOCM9TK_yo\">YouTube</a>.",
+      "<br><br>",
+      "I graduated in 2024 with a PhD from the Robotics Institute at Carnegie Mellon University,",
+      "working with <a href=\"http://hennyadmoni.com\">Henny Admoni</a> on using driver eye-gaze information for safer autonomous and assisted driving."
+    ],
+    {
+      "published": false,
+      "chunks": [
+        "I have spent summers working on similar topics at <a href=\"https://www.tri.global/\">Toyota Research Institute</a> (modeling driver risk perception) and <a href=\"https://www.bosch.com/\">Bosch</a> (gaze-based driving policy causal confusion mitigation).",
+        "Previously, I've spent time teaching neural nets to recognize free hand sketches at <a href=\"http://val.serc.iisc.ernet.in/valweb/\">IISc Bangalore</a>.",
+        "I've also worked on using temporal smoothness in videos as supervision for neural networks at <a href=\"http://users.cs.cf.ac.uk/Dave.Marshall/\">Cardiff University</a>.",
+        "I went to <a href=\"http://www.iitg.ac.in/\">IIT Guwahati</a> for ECE."
+      ]
+    }
+  ],
+  "links": [
+    {
+      "label": "CV",
+      "url": "assets/CV_wrefs.pdf"
+    },
+    {
+      "label": "G Scholar",
+      "url": "https://scholar.google.com/citations?user=NsV0tX8AAAAJ&hl=en"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/abhijatb/"
+    },
+    {
+      "label": "Github",
+      "url": "https://github.com/ajdroid/"
+    }
+  ]
+}

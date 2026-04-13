@@ -1,0 +1,28 @@
+{
+  "siteMeta": {
+    "owner": "Abhijat Biswas",
+    "lastUpdated": "Apr '26"
+  },
+  "updates": [
+    {
+      "date": "Nov '25",
+      "html": "I'm joining <a href=\"https://www.inworld.ai/\">Inworld AI</a> as a Member of Technical Staff, where I'll be working on RL for multimodal models."
+    },
+    {
+      "date": "Sept '25",
+      "html": "We made a YouTube video showcasing our voice-to-code agents in Allyon (the Pokemon game you always wanted): <a href=\"https://www.youtube.com/watch?v=ThOCM9TK_yo\">watch it here</a>."
+    },
+    {
+      "date": "Sept '24",
+      "html": "I'm excited to join <a href=\"https://clementine.games/\">Clementine</a> as the Founding AI Lead, where we are building voice-to-code agents to bring alive game companions."
+    },
+    {
+      "date": "Sept '24",
+      "html": "We've been working on a new method and dataset for measuring drivers' situational awareness (and its transitions) from their eye gaze. The paper will appear at CoRL '24 and the project website is <a href=\"https://harplab.github.io/DriverSA/\">here</a>."
+    },
+    {
+      "date": "Sept '24",
+      "html": "Happy to announce our work last summer in the new arXiv paper <a href=\"https://arxiv.org/abs/2409.04738\">Modeling Drivers' Risk Perception via Attention to Improve Driving Assistance</a> (w/ TRI). We leverage a transformer based predictor to model how risky the drivers' perception of on-road events is using gaze to reason about their model of other agents."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "fomaml-rl",
+    "title": "First-order Meta-Learned Initialization for Faster Adaptation in Deep Reinforcement Learning",
+    "imageSrc": "assets/projects/fomaml.jpg",
+    "imageWidth": 150,
+    "authorsHtml": "Abhijat Biswas, Shubham Agrawal",
+    "links": [
+      {
+        "label": "Report",
+        "url": "assets/projects/Deep_RL_project.pdf"
+      }
+    ],
+    "blurbHtml": "First-derivative approximations to meta-learning updates perform just as well as second-derivative ones. Demonstrated on RL tasks."
+  },
+  {
+    "id": "social-path-planning",
+    "title": "Socially compliant path planning",
+    "imageSrc": "assets/projects/socnavaw.gif",
+    "imageWidth": 150,
+    "imageHeight": 150,
+    "authorsHtml": "Abhijat Biswas, Ting-Che Lin, and Sean Wang",
+    "links": [
+      {
+        "label": "Report",
+        "url": "assets/projects/Planning_project.pdf"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/ajdroid/SocAwNav782"
+      },
+      {
+        "label": "Video",
+        "url": "https://youtu.be/aBGHSeXeBdE"
+      }
+    ],
+    "blurbHtml": "RTAA* + Social-LSTM based social navigation."
+  },
+  {
+    "id": "extrinsic-calib",
+    "title": "Automatic Extrinsic Calibration of Stereo Camera and 3D LiDAR",
+    "imageSrc": "assets/projects/ransac.jpg",
+    "imageWidth": 150,
+    "authorsHtml": "Abhijat Biswas, Aashi Manglik",
+    "links": [
+      {
+        "label": "Poster",
+        "url": "assets/projects/16822_Poster.pdf"
+      }
+    ],
+    "blurbHtml": "We implement a method for estimation of MAV poses and dynamic parameters during flight."
+  }
+]
