@@ -4,7 +4,7 @@
   "paragraphsHtml": [
     [
       "Hey there! I'm Abhijat Biswas. I currently work on RL for multimodal models at <a href=\"https://www.inworld.ai/\">Inworld AI</a>,",
-      "where we are building the (<a href=\"https://artificialanalysis.ai/text-to-speech/leaderboard\">best Text-to-Speech (TTS) models</a>).",
+      "where we are building the <a href=\"https://artificialanalysis.ai/text-to-speech/leaderboard\">best Text-to-Speech (TTS) models</a>.",
       "<br><br>",
       "Previously, I led the AI efforts at <a href=\"https://clementine.games/\">Clementine</a>,",
       "where built voice-to-code agents to bring alive game companions. You can check out our work on <a href=\"https://www.youtube.com/watch?v=ThOCM9TK_yo\">YouTube</a>.",
@@ -25,7 +25,7 @@
   "links": [
     {
       "label": "CV",
-      "url": "assets/CV_wrefs.pdf"
+      "url": "assets/Abhijat_CV.pdf"
     },
     {
       "label": "G Scholar",
