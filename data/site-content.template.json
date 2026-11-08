@@ -5,6 +5,10 @@
   },
   "updates": [
     {
+      "date": "Sept '26",
+      "html": "We just released <a href=\"https://www.linkedin.com/posts/inworlds-newly-released-realtime-tts-2-is-share-7501074475270959104-De74/\">Realtime TTS-2</a>, now the #1 text-to-speech model (beating Google, SpaceXAI, and ElevenLabs)."
+    },
+    {
       "date": "Nov '25",
       "html": "I'm joining <a href=\"https://www.inworld.ai/\">Inworld AI</a> as a Member of Technical Staff, where I'll be working on RL for multimodal models."
     },
