@@ -2,7 +2,8 @@
   {
     "id": "tts2-tech-report-2026",
     "title": "Inworld TTS-2 Technical Report",
-    "imageSrc": "https://inworld.ai/opengraph-image.jpg",
+    "imageSrc": "assets/paper_gifs/tts2_fig2.png",
+    "imageLink": "https://realtime.ai/",
     "imageWidth": 220,
     "authorsHtml": "The Inworld team",
     "venueHtml": "Technical Report, 2026",
@@ -16,8 +17,8 @@
         "url": "https://inworld.ai/publications"
       },
       {
-        "label": "Examples",
-        "url": "https://inworld.ai/blog/realtime-tts-2"
+        "label": "Live Demo",
+        "url": "https://realtime.ai/"
       }
     ],
     "abstractHtml": "We introduce Inworld TTS-2, a family of autoregressive text-to-speech models comprising TTS-2 and TTS-2-Flash. Building on TTS-1, TTS-2 brings free-form natural-language delivery control and production-ready cross-lingual voice cloning into a streaming speech synthesis system."
