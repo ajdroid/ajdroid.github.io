@@ -1,5 +1,28 @@
 [
   {
+    "id": "tts2-tech-report-2026",
+    "title": "Inworld TTS-2 Technical Report",
+    "imageSrc": "https://inworld.ai/opengraph-image.jpg",
+    "imageWidth": 220,
+    "authorsHtml": "The Inworld team",
+    "venueHtml": "Technical Report, 2026",
+    "links": [
+      {
+        "label": "Tech Report",
+        "url": "https://github.com/inworld-ai/tts/blob/main/tech_reports/Inworld_TTS-2_Technical_Report.pdf"
+      },
+      {
+        "label": "Publications",
+        "url": "https://inworld.ai/publications"
+      },
+      {
+        "label": "Examples",
+        "url": "https://inworld.ai/blog/realtime-tts-2"
+      }
+    ],
+    "abstractHtml": "We introduce Inworld TTS-2, a family of autoregressive text-to-speech models comprising TTS-2 and TTS-2-Flash. Building on TTS-1, TTS-2 brings free-form natural-language delivery control and production-ready cross-lingual voice cloning into a streaming speech synthesis system."
+  },
+  {
     "id": "driver-sa-corl-2024",
     "title": "Modeling Drivers' Situational Awareness from Eye Gaze for Driving Assistance",
     "imageSrc": "assets/paper_gifs/vis_abstract_driversa.png",
